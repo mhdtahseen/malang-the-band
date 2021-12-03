@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "samarkan";
+  src: url("./assets/samarkan/saman___-webfont.woff2") format("woff2"),
+    url("./assets/samarkan/saman___-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* BODY - GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+html {
+  font-size: 65%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.headings {
+  text-align: center;
+}
+
+/* NAVBAR */
+
+nav {
+  padding-top: 2%;
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 5%;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  transform: scale(1.2);
+  letter-spacing: 0.25rem;
+  text-shadow: 0 0 1.5rem #fff;
+}
+
+/* HEADER */
+
+.header-display {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      #000
+    ),
+    url(./assets/img/header.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.band-name {
+  font-family: "samarkan", sans-serif;
+  font-size: 17rem;
+  color: #fff;
+  text-shadow: (12px 12px 3px #fff);
+}
+
+.band-tag {
+  padding-right: 2%;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* CREW */
+
+.crew {
+  padding: 15vh 0;
+}
+
+.crew-heading {
+  margin-bottom: 8vh;
+}
+
+.crew-cards {
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.crew-card {
+  width: 25rem;
+  height: 40rem;
+  background-color: rgba(31, 31, 31, 0.815);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  border-radius: 2rem;
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.425);
+}
+
+.crew-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.425);
+}
+
+.crew-card-images {
+  position: relative;
+}
+
+.crew-image {
+  width: 25rem;
+  height: 24rem;
+
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.role {
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.8rem;
+  border: 0.1px solid #fff;
+  background-color: rgba(31, 31, 31);
+  border-radius: 50%;
+  stroke: #fff;
+
+  transform: scale(0.8);
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.role-text {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.crew-name {
+  font-family: "samarkan";
+  font-size: 3.8rem;
+}
+
+.crew-social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media-icon {
+  width: 2.5rem;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+}
