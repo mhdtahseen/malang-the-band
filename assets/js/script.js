@@ -23,8 +23,10 @@ hideBtn.addEventListener("click", function () {
 $(".crew-card").click(function () {
   let info = "";
   let role = "";
-  $(".overlay").toggleClass("hidden");
-  $("#crew-modal").toggleClass("hidden");
+  // $(".overlay").toggleClass("hidden");
+  // $(".overlay").toggleClass("active");
+  $(".overlay").removeClass("hide-modal");
+  $(".overlay").addClass("show-modal");
 
   let name = $(this).find(".crew-name").text();
 
@@ -47,6 +49,7 @@ $(".crew-card").click(function () {
 });
 
 $(".dissolve").click(function () {
-  $(".overlay").toggleClass("hidden");
-  $("#crew-modal").toggleClass("hidden");
+  // $(".overlay").toggleClass("hidden");
+  $(".overlay").removeClass("show-modal");
+  $(".overlay").addClass("hide-modal");
 });

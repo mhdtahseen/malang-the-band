@@ -128,6 +128,7 @@ nav {
 
 .achievements {
   padding: 10vh 0;
+  transition: 2s;
 }
 
 .achievement {
@@ -188,7 +189,7 @@ nav {
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  transition: transform 1s;
+  transition: transform 0.8s;
 
   border-radius: 2rem;
   box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.425);
@@ -206,7 +207,12 @@ nav {
 .crew-image {
   max-width: 25rem;
   height: 24rem;
-
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
@@ -235,17 +241,18 @@ nav {
 }
 
 .crew-name {
-  font-family: "samarkan";
-  font-size: 3.8rem;
+  font-family: "Cabin";
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .crew-social-media {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .social-media-icon {
-  max-width: 2.5rem;
+  max-width: 2.4rem;
   /* filter: grayscale(80%); */
 }
 
@@ -254,7 +261,7 @@ nav {
 }
 
 .crew-info {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-top: 1.4rem;
   line-height: 1.3;
 }
@@ -262,6 +269,7 @@ nav {
 .modal-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  column-gap: 1.5rem;
 }
 
 .modal-crew-img {
