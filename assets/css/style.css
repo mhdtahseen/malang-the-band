@@ -76,13 +76,13 @@ nav {
 }
 
 .header-band {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-end; */
 
   position: absolute;
   top: 50%;
-  left: 15%;
+  left: 10%;
   transform: translate(0, -50%);
 }
 
@@ -118,6 +118,10 @@ nav {
   text-transform: uppercase;
   color: #fff;
   font-size: 0.8rem;
+}
+
+.band-logo {
+  width: 43rem;
 }
 
 /* ACHIEVEMENT */
@@ -242,6 +246,7 @@ nav {
 
 .social-media-icon {
   max-width: 2.5rem;
+  /* filter: grayscale(80%); */
 }
 
 .modal-crew-role {
