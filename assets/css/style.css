@@ -1,7 +1,7 @@
 @font-face {
   font-family: "samarkan";
-  src: url("./assets/samarkan/saman___-webfont.woff2") format("woff2"),
-    url("./assets/samarkan/saman___-webfont.woff") format("woff");
+  src: url("../samarkan/saman___-webfont.woff2") format("woff2"),
+    url("../samarkan/saman___-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,6 +16,7 @@
 
 html {
   font-size: 65%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,10 +24,7 @@ body {
   font-family: "Rubik", sans-serif;
   background-color: #000;
   color: #fff;
-}
-
-.headings {
-  text-align: center;
+  position: relative;
 }
 
 /* NAVBAR */
@@ -45,10 +43,11 @@ nav {
 .nav-link:visited {
   color: #fff;
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  transition: transform 0.5s;
 }
 
 .nav-link:hover,
@@ -56,13 +55,14 @@ nav {
   transform: scale(1.2);
   letter-spacing: 0.25rem;
   text-shadow: 0 0 1.5rem #fff;
+  transition: transform 0.5s;
 }
 
 /* HEADER */
 
 .header-display {
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.3),
@@ -70,44 +70,102 @@ nav {
       rgba(0, 0, 0, 0.3),
       #000
     ),
-    url(./assets/img/header.jpg);
+    url(../img/header.jpg);
   background-size: cover;
   position: relative;
 }
 
-.header-text {
+.header-band {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
   position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  top: 50%;
+  left: 15%;
+  transform: translate(0, -50%);
+}
+
+.header-text {
+  padding: 1.5rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.5)
+  );
+  border-radius: 2rem;
+  width: 40%;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.band-desc {
+  line-height: 2;
 }
 
 .band-name {
   font-family: "samarkan", sans-serif;
-  font-size: 17rem;
+  font-size: 10rem;
   color: #fff;
   text-shadow: (12px 12px 3px #fff);
 }
 
 .band-tag {
-  padding-right: 2%;
+  padding-right: 3%;
   text-transform: uppercase;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
+}
+
+/* ACHIEVEMENT */
+
+.achievements {
+  padding: 10vh 0;
+}
+
+.achievement {
+  padding: 0.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+
+.achievement-award {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.achievement-event {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.know-more {
+  font-size: 1.3rem;
+  font-style: italic;
+  display: block;
+  padding: 2rem 0 0 0;
+  text-align: center;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.link-arrow {
+  margin-left: 0.8rem;
 }
 
 /* CREW */
 
 .crew {
-  padding: 15vh 0;
-}
-
-.crew-heading {
-  margin-bottom: 8vh;
+  padding: 10vh 0;
+  position: relative;
 }
 
 .crew-cards {
@@ -118,7 +176,7 @@ nav {
 }
 
 .crew-card {
-  width: 25rem;
+  max-width: 25rem;
   height: 40rem;
   background-color: rgba(31, 31, 31, 0.815);
   display: flex;
@@ -126,6 +184,7 @@ nav {
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
+  transition: transform 1s;
 
   border-radius: 2rem;
   box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.425);
@@ -141,7 +200,7 @@ nav {
 }
 
 .crew-image {
-  width: 25rem;
+  max-width: 25rem;
   height: 24rem;
 
   border-top-left-radius: 2rem;
@@ -149,7 +208,7 @@ nav {
 }
 
 .role {
-  width: 2.6rem;
+  max-width: 2.6rem;
   height: 2.6rem;
   padding: 0.8rem;
   border: 0.1px solid #fff;
@@ -182,9 +241,32 @@ nav {
 }
 
 .social-media-icon {
-  width: 2.5rem;
+  max-width: 2.5rem;
 }
 
+.modal-crew-role {
+  margin-top: 0.8rem;
+}
+
+.crew-info {
+  font-size: 1.6rem;
+  margin-top: 1.4rem;
+  line-height: 1.3;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.modal-crew-img {
+  border-radius: 1.2rem;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 0.5rem;
+  width: 100%;
+  /* height: auto; */
+}
 /* FOOTER */
 
 footer {

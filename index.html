@@ -14,12 +14,20 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>;
 
     <!-- END OF EXTERNAL LINKS -->
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/general.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+
+    <!-- Section Header -->
     <header class="header-display">
       <nav>
         <a href="#" class="nav-link">Home</a>
@@ -27,13 +35,90 @@
         <a href="#" class="nav-link">Gallery</a>
         <a href="#" class="nav-link">Contact</a>
       </nav>
-      <div class="header-text">
-        <h1 class="band-name">malang</h1>
-        <p class="band-tag">the band</p>
+      <div class="header-content">
+
+        <div class="header-text">
+          <p class="band-desc">
+            MALANG is an Indian Sufi & Ethnic rock band with a
+complete ensemble of a Vocalist, 2 guitarists, 1  bassist and drummer. <br><br>
+Our music embodies “Music, Expression, Freedom” -a
+fusion of classic rock with Urdu/Hindi lyrics. <br><br>
+The music resounds with contemporary references and an
+informed understanding of the two-faced times we live in
+          </p>
+        </div>
+
+        <div class="header-band">
+          <h1 class="band-name">malang</h1>
+          <p class="band-tag">the band</p>
+        </div>
       </div>
     </header>
+
+    <!-- Section Achievement -->
+    <section class="achievements container">
+      <h2 class="headings">Achievements</h2>
+      <div class="grid-5-cols grid-gap-xs">
+        <div class="achievement">
+          <span class="achievement-award">Judges Choice Award</span>
+          <span class="achievement-event">Pune Talent Hunt</span>
+        </div>
+        <div class="achievement">
+          <span class="achievement-award">People Choice Award</span>
+          <span class="achievement-event">Pune Talent Hunt</span>
+        </div>
+        <div class="achievement">
+          <div class="achievement-event">
+            Opened for India's Top Stand-up Comedian <br><strong>Zakir Khan</strong>
+          </div>
+        </div>
+        <div class="achievement">
+          <span class="achievement-event">
+            Shared Stage with Guru Randhawa, Darshan Rawal and Sanam Puri</span
+          >
+        </div>
+        <div class="achievement">
+          <span class="achievement-event">
+            Performed in front of Dignitaries/Judges <br><strong>Salim-Sulaiman</strong> & <strong>Ajay-Atul</strong>
+          </span>
+        </div>
+      </div>
+
+      <div class="achievements-more mt-md hidden">
+        <div class="grid-4-cols">
+          <div class="achievement">
+            <span class="achievement-event">
+              Opened for Indian Ocean/Agnee
+            </span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-event">
+              Finalist of Battle of Bands <strong>Pune</strong>
+            </span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-event">
+              Opened for Shankar Mahadevan's Concert
+            </span>
+          </div>
+          
+        </div>
+      </div>
+      <div id="achievement-btn-show" class=>
+        <span class="know-more show-btn"
+          >Know More <span class="link-arrow">&darr;</span></span
+        >
+      </div>
+      <div id="achievement-btn-hide" class="hidden">
+        <span  class="hidden know-more hide-btn"
+          >Show less <span class="link-arrow">&uarr;</span></span
+        >
+      </div>
+    </section>
+
+    <!-- Section Crew -->
     <section class="crew" id="crew">
-      <h2 class="crew-heading headings">Crew</h2>
+      <h2 class="headings">Crew</h2>
       <div class="crew-cards">
         <!-- Zeeshan Card -->
         <div class="crew-card">
@@ -163,8 +248,30 @@
           </div>
         </div>
       </div>
+
+
+      <!-- MODAL -->
+    <div id="crew-modal" class="modal  hidden">
+      <div class="close-modal dissolve">&times;</div>
+      <div class="modal-body">
+        <div class="modal-grid">
+          <div>
+            <h2 id = "crew-name" class="modal-crew-name"></h2>
+            <h5 id= crew-role class="modal-crew-role"></h5>
+            <p id="crew-info" class="crew-info"></p>
+          </div>
+          <img src="../assets/img/modal-default.jpg" alt="" class="modal-crew-img">
+        </div>
+      </div>
+    </div>
+
     </section>
 
+    
+
+    <!-- Footer -->
     <footer>Design &copy; by Taha 💥</footer>
+    <div class="overlay hidden dissolve"></div>
   </body>
+  <script src="assets/js/script.js"></script>
 </html>
