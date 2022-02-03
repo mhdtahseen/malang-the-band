@@ -48,9 +48,6 @@
 
 .modal {
   position: fixed;
-  /*top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   background-color: #fff;
   color: #000;
   width: 60%;
@@ -88,4 +85,47 @@
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   transition: 1s;
+}
+
+.col-1 {
+  grid-column: span 1;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-5 {
+  grid-column: span 5;
+}
+.col-6 {
+  grid-column: span 6;
+}
+
+.row-1 {
+  grid-row: span 1;
+}
+
+.row-2 {
+  grid-row: span 2;
+}
+
+.row-3 {
+  grid-row: span 3;
+}
+
+.row-4 {
+  grid-row: span 4;
+}
+
+.row-5 {
+  grid-row: span 5;
+}
+
+.row-6 {
+  grid-row: span 6;
 }

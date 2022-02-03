@@ -251,8 +251,19 @@ nav {
   gap: 1.2rem;
 }
 
+.crew-social-media-sm {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  filter: invert(100%);
+}
+
 .social-media-icon {
   max-width: 2.4rem;
+  /* filter: grayscale(80%); */
+}
+.social-media-icon-sm {
+  max-width: 2.2rem;
   /* filter: grayscale(80%); */
 }
 
@@ -262,8 +273,9 @@ nav {
 
 .crew-info {
   font-size: 1.8rem;
-  margin-top: 1.4rem;
+  margin-top: 1rem;
   line-height: 1.3;
+  padding-bottom: 2rem;
 }
 
 .modal-grid {
@@ -272,14 +284,71 @@ nav {
   column-gap: 1.5rem;
 }
 
-.modal-crew-img {
+.modal-image {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  transition: ease-out 1s;
+}
+
+.modal-image img {
   border-radius: 1.2rem;
   object-fit: cover;
+  object-position: 10% 50%;
   overflow: hidden;
   padding: 0.5rem;
   width: 100%;
+  height: 40rem;
   /* height: auto; */
 }
+
+.modal-img-inactive {
+  display: none;
+}
+
+.modal-img-active {
+  display: inline-block;
+}
+
+/* GALLERY */
+
+.gallery {
+  padding: 10vh 0;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 15rem 30rem;
+  grid-gap: 1.2rem;
+  grid-auto-flow: dense;
+}
+
+.gallery-content {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.gallery-content .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-content .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery-content:hover .image img {
+  transform: scale(1.5);
+}
+
 /* FOOTER */
 
 footer {

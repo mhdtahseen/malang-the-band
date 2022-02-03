@@ -31,11 +31,11 @@
   </head>
   <body>
     <!-- Section Header -->
-    <header class="header-display">
+    <header class="header-display" id="header">
       <nav>
-        <a href="#" class="nav-link">Home</a>
+        <a href="#header" class="nav-link">Home</a>
         <a href="#crew" class="nav-link">Crew</a>
-        <a href="#" class="nav-link">Gallery</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
         <a href="#" class="nav-link">Contact</a>
       </nav>
       <div class="header-content">
@@ -266,17 +266,95 @@
           <div class="close-modal dissolve">&times;</div>
           <div class="modal-body">
             <div class="modal-grid">
-              <div>
+              <div class="text-content">
                 <h2 id="crew-name" class="modal-crew-name"></h2>
                 <h5 id="crew-role" class="modal-crew-role"></h5>
+                <div class="crew-social-media-sm">
+                  <a href=""
+                    ><img
+                      src="./assets/img/icons/icons8-facebook.svg"
+                      class="social-media-icon-sm"
+                      alt="Facebook Link"
+                  /></a>
+                  <a href=""
+                    ><img
+                      src="./assets/img/icons/icons8-instagram.svg"
+                      class="social-media-icon-sm"
+                      alt="Instagram Link"
+                  /></a>
+                  <a href=""
+                    ><img
+                      src="./assets/img/icons/icons8-twitter.svg"
+                      class="social-media-icon-sm"
+                      alt="Twitter Link"
+                  /></a>
+                </div>
+
                 <p id="crew-info" class="crew-info"></p>
               </div>
-              <img
-                src="../assets/img/modal-default.jpg"
-                alt=""
-                class="modal-crew-img"
-              />
+              <div class="modal-image">
+                <img src="" alt="" id="crew-img-1" class="modal-img-active" />
+                <img src="" alt="" id="crew-img-2" class="modal-img-inactive" />
+                <img src="" alt="" id="crew-img-3" class="modal-img-inactive" />
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Gallery -->
+    <section class="gallery" id="gallery">
+      <h2 class="headings">Gallery</h2>
+      <div class="grid-gallery">
+        <div class="gallery-content col-2">
+          <div class="image">
+            <img src="./assets/img/gallery/0.jpg" alt="gallery-image-0" />
+          </div>
+        </div>
+        <div class="gallery-content col-2">
+          <div class="image">
+            <img src="./assets/img/gallery/1.jpg" alt="gallery-image-1" />
+          </div>
+        </div>
+        <div class="gallery-content col-2 row-3">
+          <div class="image">
+            <img src="./assets/img/gallery/2.jpg" alt="gallery-image-2" />
+          </div>
+        </div>
+        <div class="gallery-content">
+          <div class="image">
+            <img src="./assets/img/gallery/3.jpg" alt="gallery-image-3" />
+          </div>
+        </div>
+        <div class="gallery-content col-2">
+          <div class="image">
+            <img src="./assets/img/gallery/4.jpg" alt="gallery-image-4" />
+          </div>
+        </div>
+        <div class="gallery-content">
+          <div class="image">
+            <img src="./assets/img/gallery/5.jpg" alt="gallery-image-5" />
+          </div>
+        </div>
+        <div class="gallery-content">
+          <div class="image">
+            <img src="./assets/img/gallery/6.jpg" alt="gallery-image-6" />
+          </div>
+        </div>
+        <div class="gallery-content col-2">
+          <div class="image">
+            <img src="./assets/img/gallery/7.jpg" alt="gallery-image-7" />
+          </div>
+        </div>
+        <div class="gallery-content">
+          <div class="image">
+            <img src="./assets/img/gallery/8.jpg" alt="gallery-image-8" />
+          </div>
+        </div>
+        <div class="gallery-content col-6 row-2">
+          <div class="image">
+            <img src="./assets/img/gallery/9.jpg" alt="gallery-image-9" />
           </div>
         </div>
       </div>

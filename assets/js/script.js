@@ -5,6 +5,8 @@ const hideBtn = document.getElementById("achievement-btn-hide");
 
 // console.log(achievementMore, showBtn);
 
+// ACHIEVEMENTS SHOW / HIDE
+
 document
   .getElementById("achievement-btn-show")
   .addEventListener("click", function () {
@@ -19,6 +21,8 @@ hideBtn.addEventListener("click", function () {
   achievementMore.classList.toggle("hidden");
   hideBtn.classList.toggle("hidden");
 });
+
+// MODAL CREW
 
 $(".crew-card").click(function () {
   let info = "";
@@ -43,6 +47,24 @@ $(".crew-card").click(function () {
         $("#crew-name").text(name);
         $("#crew-role").text(role);
         $("#crew-info").html(info);
+        $("#crew-img-1").attr("src", value.img1);
+        $("#crew-img-2").attr("src", value.img2);
+        $("#crew-img-3").attr("src", value.img3);
+
+        setInterval(function () {
+          let currentImg = $(".modal-img-active");
+          let nextImg = currentImg.next("img");
+
+          if (nextImg.length != 0) {
+            currentImg.removeClass("modal-img-active");
+            currentImg.addClass("modal-img-inactive");
+            nextImg.addClass("modal-img-active");
+          } else {
+            $("#crew-img-3").removeClass("modal-img-active");
+            $("#crew-img-3").addClass("modal-img-inactive");
+            $("#crew-img-1").addClass("modal-img-active");
+          }
+        }, 5000);
       }
     });
   });
