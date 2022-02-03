@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "samarkan";
+  src: url("../samarkan/saman___-webfont.woff2") format("woff2"),
+    url("../samarkan/saman___-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* BODY - GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+html {
+  font-size: 65%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+
+/* NAVBAR */
+
+nav {
+  padding-top: 2%;
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 5%;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: transform 0.5s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  transform: scale(1.2);
+  letter-spacing: 0.25rem;
+  text-shadow: 0 0 1.5rem #fff;
+  transition: transform 0.5s;
+}
+
+/* HEADER */
+
+.header-display {
+  height: 100vh;
+  max-width: 100vw;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      #000
+    ),
+    url(../img/header.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.header-band {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-end; */
+
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.band-about {
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  text-align: center;
+  margin: 3rem 0 0 2.5rem;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.band-desc {
+  line-height: 2;
+}
+
+.band-name {
+  font-family: "samarkan", sans-serif;
+  font-size: 10rem;
+  color: #fff;
+  text-shadow: (12px 12px 3px #fff);
+}
+
+.band-tag {
+  padding-right: 3%;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.band-logo {
+  width: 60rem;
+  opacity: 0.85;
+}
+
+/* ACHIEVEMENT */
+
+.achievements {
+  padding: 10vh 0;
+  transition: 2s;
+}
+
+.achievement {
+  padding: 0.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+
+.achievement-award {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.achievement-event {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.know-more {
+  font-size: 1.3rem;
+  font-style: italic;
+  display: block;
+  padding: 2rem 0 0 0;
+  text-align: center;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.link-arrow {
+  margin-left: 0.8rem;
+}
+
+/* CREW */
+
+.info {
+  padding: 10vh 0;
+  position: relative;
+}
+
+.crew-cards {
+  padding: 3%;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-evenly; */
+}
+
+.crew-card {
+  max-width: 25rem;
+  height: 15rem;
+  background-color: rgba(31, 31, 31, 0.815);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  transition: transform 0.8s;
+
+  border-radius: 2rem;
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.425);
+}
+
+.crew-card:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.425); */
+}
+
+.crew-card-images {
+  position: relative;
+}
+
+.crew-image {
+  max-width: 25rem;
+  height: 24rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.role {
+  max-width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.8rem;
+  border: 0.1px solid #fff;
+  background-color: rgba(31, 31, 31);
+  border-radius: 50%;
+  stroke: #fff;
+
+  transform: scale(0.8);
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.role-text {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.crew-name {
+  font-family: "Cabin";
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.crew-social-media {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.crew-social-media-sm {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  filter: invert(100%);
+}
+
+.social-media-icon {
+  max-width: 2.4rem;
+  /* filter: grayscale(80%); */
+}
+.social-media-icon-sm {
+  max-width: 2.2rem;
+  /* filter: grayscale(80%); */
+}
+
+.modal-crew-role {
+  margin-top: 0.8rem;
+}
+
+.crew-info {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  line-height: 1.3;
+  padding-bottom: 2rem;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1.5rem;
+}
+
+.modal-image {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  transition: ease-out 1s;
+}
+
+.modal-image img {
+  border-radius: 1.2rem;
+  object-fit: cover;
+  object-position: 10% 50%;
+  overflow: hidden;
+  padding: 0.5rem;
+  width: 100%;
+  height: 40rem;
+  /* height: auto; */
+}
+
+.modal-img-inactive {
+  display: none;
+}
+
+.modal-img-active {
+  display: inline-block;
+}
+
+/* GALLERY */
+
+.gallery {
+  padding: 10vh 0;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 15rem 30rem;
+  grid-gap: 1.2rem;
+  grid-auto-flow: dense;
+}
+
+.gallery-content {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.gallery-content .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-content .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery-content:hover .image img {
+  transform: scale(1.5);
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+}

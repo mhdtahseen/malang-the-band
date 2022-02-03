@@ -2,7 +2,7 @@
   {
     "name": "Zeeshan",
     "role": "Vocalist",
-    "img1": "../assets/img/crew/modal-default.jpg",
+    "img1": "../assets/img/zeeshan.jpg",
     "img2": "../assets/img/crew/modal-2.jpg",
     "img3": "../assets/img/crew/modal-3.jpg",
     "info": "When you mix Pandiit Jasrajj and Jimmy Hendriicks you will see Zeeshan Khan performing on thestage.Zeeshan Khan is an Indiian cllassiicall and contemporary siinger belonging to seniya Gharana lineage. He is the lead singer for Pune’s most loved band--<strong>Malang The Band</strong>. <br> <br> The grand son of Ustad Moinudien Khan Sahab and son of Ustad Ismail Khan is a well trained Indian classical singer, with a perfectly versatile voice. The ease with which he sings a ghazal as well as a sufii song, reflects in the beauty of his classical bandhish and the spice of any Bollywoodchartbusterand that's what makes him the voice of New Age Music. Zeeshan Khan is a true performer and next big thing in the world of music"
@@ -10,24 +10,24 @@
   {
     "name": "Ganesh",
     "role": "Drummer",
-    "img1": "",
-    "img2": "",
+    "img1": "../assets/img/gani.jpeg",
+    "img2": "../assets/img/crew/modal-2.jpg",
     "img3": "",
     "info": "Ganesh has been playing drums since the past 7 years in Pune and has given several good performances across different venues in Pune. <br> <br>He is a self – taught drummer and has learnt everything by seeing his guru and biggest inspiration Darshan Doshi a well known drummer from India."
   },
   {
     "name": "Neil",
     "role": "Bassist",
-    "img1": "",
-    "img2": "",
+    "img1": "../assets/img/neil.jpeg",
+    "img2": "../assets/img/crew/modal-2.jpg",
     "img3": "",
     "info": "Neil is a self-taught guitarist and Bass Guitarist With his firm and groovy bass lines, he is the perfect pillar for every song of our performance. Neil is influenced highly from Metal music but he brings his unique elements which makes the band sound amazing"
   },
   {
     "name": "Mahesh",
     "role": "Guitarist",
-    "img1": "",
-    "img2": "",
+    "img1": "../assets/img/mahi.jpeg",
+    "img2": "../assets/img/crew/modal-2.jpg",
     "img3": "",
     "info": "Some information About Mahesh"
   }

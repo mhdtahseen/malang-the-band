@@ -24,6 +24,17 @@
   opacity: 1;
 }
 
+.grid {
+  display: grid;
+  padding: 1.2rem;
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.2rem;
+  row-gap: 5rem;
+}
+
 .grid-5-cols {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

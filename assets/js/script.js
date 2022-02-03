@@ -3,6 +3,8 @@ const achievementMore = document.querySelector(".achievements-more");
 const showBtn = document.getElementById("achievement-btn-show");
 const hideBtn = document.getElementById("achievement-btn-hide");
 
+let displayImg = 1;
+
 // console.log(achievementMore, showBtn);
 
 // ACHIEVEMENTS SHOW / HIDE
@@ -51,20 +53,23 @@ $(".crew-card").click(function () {
         $("#crew-img-2").attr("src", value.img2);
         $("#crew-img-3").attr("src", value.img3);
 
-        setInterval(function () {
-          let currentImg = $(".modal-img-active");
-          let nextImg = currentImg.next("img");
+        $("#crew-modal").ready(function () {
+          displayImg = setInterval(function () {
+            let currentImg = $(".modal-img-active");
+            let nextImg = currentImg.next("img");
 
-          if (nextImg.length != 0) {
-            currentImg.removeClass("modal-img-active");
-            currentImg.addClass("modal-img-inactive");
-            nextImg.addClass("modal-img-active");
-          } else {
-            $("#crew-img-3").removeClass("modal-img-active");
-            $("#crew-img-3").addClass("modal-img-inactive");
-            $("#crew-img-1").addClass("modal-img-active");
-          }
-        }, 5000);
+            if (nextImg.length != 0) {
+              console.log(nextImg);
+              currentImg.addClass("modal-img-inactive");
+              currentImg.removeClass("modal-img-active");
+              nextImg.addClass("modal-img-active");
+            } else {
+              $("#crew-img-3").removeClass("modal-img-active");
+              $("#crew-img-3").addClass("modal-img-inactive");
+              $("#crew-img-1").addClass("modal-img-active");
+            }
+          }, 5000);
+        });
       }
     });
   });
@@ -74,4 +79,9 @@ $(".dissolve").click(function () {
   // $(".overlay").toggleClass("hidden");
   $(".overlay").removeClass("show-modal");
   $(".overlay").addClass("hide-modal");
+  clearTimeout(displayImg);
+  $(".modal-img-active")
+    .removeClass("modal-img-active")
+    .addClass("modal-img-inactive");
+  $("#crew-img-1").addClass("modal-img-active");
 });
