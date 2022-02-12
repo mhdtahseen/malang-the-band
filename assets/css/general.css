@@ -14,6 +14,10 @@
   display: none;
 }
 
+.active {
+  display: block;
+}
+
 .hide-modal {
   z-index: -1;
   opacity: 0;
@@ -139,4 +143,30 @@
 
 .row-6 {
   grid-row: span 6;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 10px;
+
+  transition: all 1s;
+
+  /* Just for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-form {
+  background-color: #241808;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+  margin-top: 1.2rem;
 }

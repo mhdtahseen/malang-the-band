@@ -68,7 +68,7 @@ $(".crew-card").click(function () {
               $("#crew-img-3").addClass("modal-img-inactive");
               $("#crew-img-1").addClass("modal-img-active");
             }
-          }, 5000);
+          }, 3000);
         });
       }
     });
@@ -84,4 +84,74 @@ $(".dissolve").click(function () {
     .removeClass("modal-img-active")
     .addClass("modal-img-inactive");
   $("#crew-img-1").addClass("modal-img-active");
+});
+
+//Get Form Data
+function getQuote(e) {
+  const name = $("#full-name").val();
+  const email = $("#email").val();
+  const contact = $("#contact").val();
+  const location = $("#location").val();
+  const eventType = $("#event-type").val();
+  const company = $("#company").val();
+  const others = $("#other-event").val();
+  const guests = $("#guests").val();
+
+  const quote = {
+    name: name,
+    email: email,
+    contact: contact,
+    location: location,
+    eventType: eventType,
+    company: company,
+    others: others,
+    guests: guests,
+  };
+
+  const quoteCopy = {
+    name: $("#full-name").val(),
+    email: $("#email").val(),
+    contact: $("#contact").val(),
+    location: $("#location").val(),
+    eventType: $("#event-type").val(),
+    company: $("#company").val(),
+    others: $("#other-event").val(),
+    guests: $("#guests").val(),
+  };
+
+  console.log(quote);
+  console.log(quoteCopy);
+  alert("Submiited");
+}
+
+$(document).ready(function () {
+  // Dynmic Form Manupilation //
+  $("#event-type").on("change", function () {
+    // console.log(this.value);
+    $("#crowd").toggleClass("hidden");
+    if (this.value === "other") {
+      $("#others").toggleClass("hidden");
+      $("#crowd").removeClass("hidden");
+      $("#company").addClass("hidden");
+    } else if (this.value === "celebration") {
+      $("#others, #company").addClass("hidden");
+      $("#crowd").removeClass("hidden");
+    } else if (this.value === "corporate") {
+      $("#company").toggleClass("hidden");
+      $("#others").addClass("hidden");
+      $("#crowd").removeClass("hidden");
+    } else if (this.value === "wedding") {
+      $("#others,#company").addClass("hidden");
+      $("#crowd").removeClass("hidden");
+    } else if (this.value === "-1") {
+      $("#others,#company,#crowd").addClass("hidden");
+    }
+  });
+
+  $("#submitBtn").click(function () {
+    let x = $("#quote-form").serializeArray();
+    alert(x);
+    console.log(x);
+    // console.log("Clic?ked");
+  });
 });

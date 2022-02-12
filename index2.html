@@ -36,20 +36,9 @@
         <a href="#header" class="nav-link">Home</a>
         <a href="#crew" class="nav-link">Crew</a>
         <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-content">
-        <!-- <div class="header-text">
-          <p class="band-desc">
-            MALANG is an Indian Sufi & Ethnic rock band with a complete ensemble
-            of a Vocalist, 2 guitarists, 1 bassist and drummer. <br /><br />
-            Our music embodies “Music, Expression, Freedom” -a fusion of classic
-            rock with Urdu/Hindi lyrics. <br /><br />
-            The music resounds with contemporary references and an informed
-            understanding of the two-faced times we live in
-          </p>
-        </div> -->
-
         <div class="header-band">
           <!-- <h1 class="band-name">malang</h1>
           <p class="band-tag">the band</p> -->
@@ -391,7 +380,111 @@
         </div>
         <div class="gallery-content col-6 row-2">
           <div class="image">
-            <img src="./assets/img/gallery/9.jpg" alt="gallery-image-9" />
+            <img src="./assets/img/gallery/9.png" alt="gallery-image-9" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cta" id="contact">
+      <div class="section-container">
+        <div class="cta">
+          <div class="social-media"></div>
+          <div class="cta-form-box">
+            <p class="cta-text">
+              We always perform to Entertain, If you would like to have us
+              perform for you in a Private Setting, we'd love to do so. Leave us
+              your information and we'll be in touch with you.
+            </p>
+            <form class="cta-form" id="quote-form" netlify>
+              <div>
+                <label for="full-name">Full Name</label>
+                <input
+                  id="full-name"
+                  type="text"
+                  class="cta-input"
+                  name="full-name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email"> Email Address</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="jdoe@example.com"
+                  class="cta-input"
+                  required
+                />
+              </div>
+              <div>
+                <label for="phone">Contact</label>
+                <input
+                  id="contact"
+                  type="text"
+                  name="contact"
+                  placeholder="+91 -"
+                  class="cta-input"
+                  required
+                />
+              </div>
+              <div>
+                <label for="location">Event Location</label>
+                <input
+                  id="location"
+                  type="text"
+                  name="location"
+                  placeholder="Pune"
+                  class="cta-input"
+                  required
+                />
+              </div>
+              <div>
+                <label for="event-type">Event Type</label>
+                <select name="event-type" id="event-type" required>
+                  <option value="-1">Please Choose One</option>
+                  <option value="corporate">Corporate Event</option>
+                  <option value="wedding">Wedding/Reception</option>
+                  <option value="celebration">Small Celebration</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div id="company" class="hidden">
+                <label for="expected-crowd">Company Name</label>
+                <input
+                  id="company"
+                  type="text"
+                  name="company"
+                  class="cta-input"
+                  placeholder="Company Name"
+                />
+              </div>
+              <div id="others" class="hidden">
+                <label for="others">Specify Event Type</label>
+                <input
+                  type="text"
+                  name="other-event"
+                  placeholder="Event Type"
+                  id="other-event"
+                  class="cta-input"
+                />
+              </div>
+              <div id="crowd" class="hidden">
+                <label for="expected-crowd">Expected Guests</label>
+                <input
+                  id="guests"
+                  type="number"
+                  name="guests"
+                  class="cta-input"
+                  placeholder="50-100"
+                />
+              </div>
+              <button type="button" id="submitBtn" class="btn btn-form">
+                Get Quote
+              </button>
+            </form>
           </div>
         </div>
       </div>
